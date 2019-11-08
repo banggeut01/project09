@@ -2,9 +2,8 @@
   <div class="col-3 my-3">
     <!-- img 태그에 src와 alt값(영화제목)을 설정하시오 -->
     <img class="movie--poster my-3" :src="movie.poster_url">
-    
     <!-- 영화 제목을 출력하시오. -->
-    <h3>{{movie.name}}</h3>
+    <h5>{{movie.name}}</h5>
     <!-- 모달을 활용하기 위해서는 data-target에 모달에서 정의된 id값을 넣어야 합니다. -->
     <button class="btn btn-primary" data-toggle="modal" :data-target="'#movie-'+movie.id">영화 정보 상세보기</button>
     <!-- 1-3. 호출하시오.

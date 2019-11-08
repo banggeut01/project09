@@ -37,12 +37,12 @@ export default {
                   })
     // 2) 제시된 URL로 요청을 통해 data의 genres 배열에 해당 하는 데이터를 넣으시오.
     axios.get('https://gist.githubusercontent.com/banggeut01/b7555e081d4c0e03f0651b4012d119b9/raw/64e58df2523436467575a1d7b6dc0c6ce82c2538/genre.json')
-                  .then(response =>{
-                    this.genres = response.data
+                  .then(response =>{                    
+                    this.genres = [
+                      {id: 0, name: '모두보기'},
+                      ...response.data // ... - Spread 연산자 (Spread Operator)
+                    ] 
                   })
-    
-    console.log(this.movies)
-    console.log(this.genres)
     // axios는 위에 호출되어 있으며, node 설치도 완료되어 있습니다.
   },
 }
